@@ -1,0 +1,30 @@
+{
+  "name": "crass-loader",
+  "version": "1.0.0",
+  "description": "Crass loader module for webpack",
+  "keywords": [
+    "webpack",
+    "loader",
+    "crass",
+    "css",
+    "minify"
+  ],
+  "scripts": {
+    "test": "jest",
+    "travis": "jest --coverage"
+  },
+  "homepage": "https://github.com/paleite/crass-loader",
+  "bugs": {
+    "url": "https://github.com/paleite/crass-loader/issues"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/paleite/crass-loader.git",
+  "author": "Patrick Eriksson <paleite@kth.se>",
+  "license": "MIT",
+  "dependencies": {
+    "crass": "^0.10.3"
+  },
+  "devDependencies": {
+    "jest": "^20.0.0"
+  }
+}
