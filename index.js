@@ -2,9 +2,10 @@
 
 var crass = require('crass');
 var browser_support = require('crass/dist/browser_support');
+var loaderUtils = require('loader-utils');
 
 module.exports = function(source) {
-  var crassOptions = this.options ? this.options.crass : false;
+  var crassOptions = loaderUtils.getOptions(this);
   var options = {
     optimize: true
   };
