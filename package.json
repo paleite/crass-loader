@@ -30,7 +30,7 @@
   "author": "Patrick Eriksson <paleite@kth.se>",
   "license": "MIT",
   "dependencies": {
-    "crass": "^0.10.3",
+    "crass": "^0.10.4",
     "eslint": "^4.7.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
