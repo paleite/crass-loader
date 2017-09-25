@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var crass = require('crass');
-var browser_support = require('crass/dist/browser_support');
-var loaderUtils = require('loader-utils');
+var crass = require("crass");
+var browser_support = require("crass/dist/browser_support");
+var loaderUtils = require("loader-utils");
 
 module.exports = function(source) {
   var crassOptions = loaderUtils.getOptions(this);
@@ -15,21 +15,21 @@ module.exports = function(source) {
     this.cacheable();
   }
 
-  if (typeof crassOptions === 'object') {
-    if (typeof crassOptions.optimize === 'boolean') {
+  if (crassOptions !== null && typeof crassOptions === "object") {
+    if (typeof crassOptions.optimize === "boolean") {
       options.optimize = crassOptions.optimize;
     }
-    if (typeof crassOptions.o1 === 'boolean') {
+    if (typeof crassOptions.o1 === "boolean") {
       options.o1 = crassOptions.o1;
     }
-    if (typeof crassOptions.pretty === 'boolean') {
+    if (typeof crassOptions.pretty === "boolean") {
       options.pretty = crassOptions.pretty;
     }
-    if (typeof crassOptions.saveie === 'boolean') {
+    if (typeof crassOptions.saveie === "boolean") {
       options.saveie = crassOptions.saveie;
     }
-    if ('min' in crassOptions) {
-      var minPlatsUnparsed = crassOptions.min.split(',');
+    if ("min" in crassOptions) {
+      var minPlatsUnparsed = crassOptions.min.split(",");
       if (minPlatsUnparsed.length) {
         var minPlats = minPlatsUnparsed.map(browser_support.parseBrowser);
         options.browser_min = {};
@@ -42,11 +42,11 @@ module.exports = function(source) {
         chrome: 39,
         firefox: 31,
         ie: 11,
-        opera: 26,
+        opera: 26
       };
     }
 
-    if (typeof crassOptions.css4 === 'boolean') {
+    if (typeof crassOptions.css4 === "boolean") {
       options.css4 = crassOptions.css4;
     }
   }

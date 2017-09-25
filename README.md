@@ -26,10 +26,13 @@ Using [crass-loader](https://www.npmjs.com/package/crass-loader) with [css-loade
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          'crass-loader'
+        ]
       }
     ]
   }
@@ -49,15 +52,20 @@ Use 'optimize: false' to avoid optimization.
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          {
+            loader: 'crass-loader',
+            options: {
+              optimize: false
+            }
+          }
+        ]
       }
     ]
-  },
-  crass: {
-    optimize: false
   }
 };
 ```
@@ -74,15 +82,20 @@ ATTN: Will only work if 'optimize: true'
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          {
+            loader: 'crass-loader',
+            options: {
+              o1: true
+            }
+          }
+        ]
       }
     ]
-  },
-  crass: {
-    o1: true
   }
 };
 ```
@@ -95,15 +108,20 @@ With the `pretty` option Crass will prettify the output.
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          {
+            loader: 'crass-loader',
+            options: {
+              pretty: true
+            }
+          }
+        ]
       }
     ]
-  },
-  crass: {
-    pretty: true
   }
 };
 ```
@@ -116,15 +134,20 @@ Use the `saveie` option to get Crass to specifically support Internet Explorer 6
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          {
+            loader: 'crass-loader',
+            options: {
+              saveie: true
+            }
+          }
+        ]
       }
     ]
-  },
-  crass: {
-    saveie: true
   }
 };
 ```
@@ -138,15 +161,20 @@ Set a comma-separated list of browser versions to instruct Crass to strip CSS th
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          {
+            loader: 'crass-loader',
+            options: {
+              min: 'ie1,fx5,chr1'
+            }
+          }
+        ]
       }
     ]
-  },
-  crass: {
-    min: 'ie1,fx5,chr1'
   }
 };
 ```
@@ -159,15 +187,20 @@ Use the `css4` option to get Crass to allow optimized output to contain CSS4 fea
 module.exports = {
   ...
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!crass-loader',
+        use: [
+          'css-loader',
+          {
+            loader: 'crass-loader',
+            options: {
+              css4: true
+            }
+          }
+        ]
       }
     ]
-  },
-  crass: {
-    css4: true
   }
 };
 ```
