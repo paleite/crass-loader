@@ -1,0 +1,12 @@
+{
+  "extends": "standard",
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-template": "error",
+    "quotes": ["error", "backtick"]
+  }
+}

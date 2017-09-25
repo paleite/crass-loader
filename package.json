@@ -10,8 +10,16 @@
     "minify"
   ],
   "scripts": {
+    "precommit": "lint-staged",
     "test": "jest",
     "travis": "jest --coverage"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --print-width 120 --write '*.js'",
+      "eslint --fix '*.js'",
+      "git add"
+    ]
   },
   "homepage": "https://github.com/paleite/crass-loader",
   "bugs": {
@@ -23,9 +31,17 @@
   "license": "MIT",
   "dependencies": {
     "crass": "^0.10.3",
+    "eslint": "^4.7.2",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "loader-utils": "^1.1.0"
   },
   "devDependencies": {
-    "jest": "^21.1.0"
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "lint-staged": "^4.2.3"
   }
 }
