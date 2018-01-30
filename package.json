@@ -30,9 +30,9 @@
   "author": "Patrick Eriksson <paleite@kth.se>",
   "license": "MIT",
   "dependencies": {
-    "crass": "^0.10.4",
+    "crass": "^0.12.0",
     "eslint": "^4.7.2",
-    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "jest": "^21.1.0",
-    "lint-staged": "^4.2.3"
+    "jest": "^22.1.4",
+    "lint-staged": "^6.1.0"
   }
 }
