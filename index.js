@@ -60,9 +60,8 @@ module.exports = function (source) {
   if (result) {
     if (options.pretty) {
       return result.pretty()
-    } else {
-      return result.toString()
     }
+    return result.toString()
   }
 
   return source
