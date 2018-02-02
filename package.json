@@ -2,7 +2,9 @@
   "name": "crass-loader",
   "version": "1.0.3",
   "description": "Crass loader module for webpack",
-  "engines" : { "npm" : ">5.2.0" },
+  "engines": {
+    "npm": ">5.2.0"
+  },
   "keywords": [
     "webpack",
     "loader",
@@ -44,5 +46,9 @@
     "husky": "^0.14.3",
     "jest": "^22.1.4",
     "lint-staged": "^6.1.0"
+  },
+  "resolutions": {
+    "debug": ">=3.1.0",
+    "tough-cookie": ">=2.3.3"
   }
 }
