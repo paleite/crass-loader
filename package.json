@@ -1,6 +1,6 @@
 {
   "name": "crass-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Crass loader module for webpack",
   "engines": {
     "npm": ">5.2.0"
